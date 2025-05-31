@@ -1,5 +1,4 @@
 import pygame
-from pyautogui import size
 import game_files.menu,game_files.game
 import time
 time = time.time()
@@ -14,10 +13,9 @@ game_win_sound_played = False
 
 main_screen_sound = pygame.mixer.Sound('game_files/sounds/main_screen.mp3')
 main_screen_sound_played = False
-
-width,height = size()
-height = height - (height*10/100) 
-width = width -500
+pygame.init()
+height = pygame.display.Info().current_h - ((pygame.display.Info().current_h)* 10/100)
+width = pygame.display.Info().current_w
 win = pygame.display.set_mode((width,height))
 fps = 60
 clock = pygame.time.Clock()
