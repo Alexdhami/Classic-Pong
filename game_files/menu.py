@@ -47,7 +47,7 @@ class MenuScreens():
         # pygame.draw.rect(self.screen,'black',play_rect)
         # pygame.draw.rect(self.screen,'white',quit_rect)
         mouse_x,mouse_y = mouse
-        if play_rect.collidepoint(muse_x,mouse_y):
+        if play_rect.collidepoint(mouse_x,mouse_y):
             self.get_hover_left(play_rect, self.hover_width, height)
             self.get_hover_right(play_rect,self.hover_width,height)        
 
